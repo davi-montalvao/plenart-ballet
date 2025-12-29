@@ -1,65 +1,360 @@
-import Image from "next/image";
+"use client";
+
+import { useState, useEffect } from "react";
+import Container from "./components/Container";
+import {
+  PageWrapper,
+  NavBar,
+  NavIcon,
+  SiteTitle,
+  MenuToggle,
+  MobileMenu,
+  NavLink,
+  HeroTitle,
+  HeroSubtitle,
+  CTAButton,
+  HeroImage,
+  AboutImageWrapper,
+  AboutHeading,
+  AboutText,
+  BulletDot,
+  LogoWrap,
+  Section,
+  GridTwo,
+  GridThree,
+  Card,
+  InstructorCard,
+  CTASection,
+  ContactGrid,
+  FormInput,
+  FormTextArea,
+  FooterBar,
+  FooterContainer,
+  SmallHeading,
+  Label,
+  MutedText,
+  Accent,
+  FullWidthButton,
+  NavInner,
+  LeftGroup,
+  RightGroup,
+  LogoImage,
+  CTAMargin,
+  SectionHeader,
+  SectionTitle,
+  SectionSubtitle,
+  FeaturesGrid,
+  FeatureItem,
+  CardTitle,
+  ClassesGrid,
+  FooterHeading,
+  FooterText,
+  FooterLink,
+  FooterBottom,
+  NavLinksContainer,
+  MobileMenuInner,
+  BackToTop,
+  BodyText,
+  InstructorImageBox,
+  Specialty,
+  EmojiLarge,
+  GalleryGrid,
+  GalleryItem,
+  GridFour,
+  SobreSection,
+} from "./styles";
+import GalleryCarousel from "./components/GalleryCarousel";
+import { CarouselContainer } from "./styles";
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setShowTop(window.scrollY > 300);
+    }
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  function scrollToSection(id: string) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+    setIsMenuOpen(false);
+  }
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <PageWrapper>
+      <NavBar>
+        <Container>
+          <NavInner>
+            <LeftGroup>
+              <NavIcon>
+                <img src="/images/miniLogo.png" alt="Plenart mini logo" />
+              </NavIcon>
+              <SiteTitle>Plenart Ballet</SiteTitle>
+            </LeftGroup>
+
+            <RightGroup>
+              <MenuToggle onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </MenuToggle>
+
+              <NavLinksContainer>
+                {["Sobre", "Classes", "Instrutores", "Galeria", "Contato"].map((item) => (
+                  <NavLink key={item} onClick={() => scrollToSection(item.toLowerCase())}>
+                    {item}
+                  </NavLink>
+                ))}
+              </NavLinksContainer>
+            </RightGroup>
+          </NavInner>
+        </Container>
+
+        {isMenuOpen && (
+          <MobileMenu>
+            <MobileMenuInner>
+              {["Sobre", "Classes", "Instrutores", "Galeria", "Contato"].map((item) => (
+                <NavLink key={item} onClick={() => scrollToSection(item.toLowerCase())}>
+                  {item}
+                </NavLink>
+              ))}
+            </MobileMenuInner>
+          </MobileMenu>
+        )}
+      </NavBar>
+
+      <Section>
+        <Container $center>
+          <LogoWrap>
+            <LogoImage src="/logo.png" alt="Plenarte Ballet logo" />
+          </LogoWrap>
+
+          <HeroTitle>A Arte do Movimento, a Beleza da Dança</HeroTitle>
+
+          <CTAMargin>
+            <CTAButton onClick={() => scrollToSection("classes")}>Conheça Nossas Classes</CTAButton>
+          </CTAMargin>
+
+          <HeroImage>
+            <picture>
+              <source srcSet="/images/classes-hero.png" type="image/png" />
+              <img src="/images/classes-hero.png" alt="Aula de balé" loading="lazy" />
+            </picture>
+          </HeroImage>
+        </Container>
+      </Section>
+
+      <SobreSection id="sobre">
+        <Container>
+          <GridTwo>
+            <AboutImageWrapper>
+              <img src="/images/aboutUs.png" alt="Sobre a Plenart" loading="lazy" />
+            </AboutImageWrapper>
+
+            <div>
+              <AboutHeading>Nossa história</AboutHeading>
+              <AboutText>Fundada com paixão pela dança, a Plenart Ballet nasceu do desejo de compartilhar a técnica clássica com um toque contemporâneo e acolhedor.</AboutText>
+
+              <FeaturesGrid>
+                <FeatureItem>
+                  <BulletDot />
+                  <p>Aulas para todas as idades</p>
+                </FeatureItem>
+
+                <FeatureItem>
+                  <BulletDot />
+                  <p>Professores certificados</p>
+                </FeatureItem>
+              </FeaturesGrid>
+            </div>
+          </GridTwo>
+        </Container>
+      </SobreSection>
+
+      {/* Classes Section */}
+      <Section id="classes">
+        <Container>
+          <SectionHeader>
+            <SectionTitle>Nossas <Accent>Classes</Accent></SectionTitle>
+            <SectionSubtitle>Programas estruturados para todos os níveis</SectionSubtitle>
+          </SectionHeader>
+
+          <ClassesGrid>
+            {[
+              { title: "Ballet Clássico Infantil", age: "A partir de 4 anos", desc: "Introdução à técnica clássica com foco em desenvolvimento motor." },
+              { title: "Ballet Clássico Intermediário", age: "A partir de 8 anos", desc: "Aprofundamento técnico e preparação para pontas." },
+              { title: "Ballet Contemporâneo", age: "A partir de 10 anos", desc: "Exploração de movimentos modernos mantendo base clássica." },
+              { title: "Ballet Adulto", age: "Sem limite de idade", desc: "Classes para adultos que desejam aprender ou retomar." },
+              { title: "Preparatório", age: "Iniciantes", desc: "Nivelamento técnico antes de ingressar nas classes regulares." },
+              { title: "Intensivo de Verão", age: "Todas as idades", desc: "Programa especial de imersão durante as férias escolares." }
+            ].map((cls, idx) => (
+              <Card key={idx}>
+                <CardTitle>{cls.title}</CardTitle>
+                <Specialty>{cls.age}</Specialty>
+                <BodyText>{cls.desc}</BodyText>
+              </Card>
+            ))}
+          </ClassesGrid>
+        </Container>
+      </Section>
+
+      {/* Instrutores Section */}
+      <Section id="instrutores">
+        <Container>
+          <SectionHeader>
+            <SectionTitle>Nossos <Accent>Instrutores</Accent></SectionTitle>
+            <SectionSubtitle>Profissionais experientes dedicados ao seu desenvolvimento</SectionSubtitle>
+          </SectionHeader>
+
+          <GridFour>
+            {[
+              { name: "Marina Silva", speciality: "Ballet Clássico" },
+              { name: "Lucas Santos", speciality: "Contemporâneo" },
+              { name: "Beatriz Oliveira", speciality: "Infantil" },
+              { name: "Rafael Costa", speciality: "Técnica Avançada" }
+            ].map((instructor, idx) => (
+              <InstructorCard key={idx}>
+                  <InstructorImageBox>
+                    <EmojiLarge>👩‍🎓</EmojiLarge>
+                  </InstructorImageBox>
+                <CardTitle>{instructor.name}</CardTitle>
+                <Specialty>{instructor.speciality}</Specialty>
+              </InstructorCard>
+            ))}
+          </GridFour>
+        </Container>
+      </Section>
+
+      {/* Galeria Section */}
+      <Section id="galeria">
+        <Container>
+          <SectionHeader>
+            <SectionTitle><Accent>Galeria</Accent> de Momentos</SectionTitle>
+            <SectionSubtitle>Capturando a beleza de nossas apresentações</SectionSubtitle>
+          </SectionHeader>
+
+          {/* Carousel similar to landonorris.com "On Socials" */}
+          <GalleryCarousel />
+        </Container>
+      </Section>
+
+      {/* CTA Section */}
+      <CTASection>
+        <Container $center>
+          <SectionTitle>Pronto para <Accent>Dançar?</Accent></SectionTitle>
+          <SectionSubtitle>Agende uma aula experimental e descubra a magia da dança</SectionSubtitle>
+          <CTAMargin>
+            <CTAButton onClick={() => scrollToSection("contato")}>Agende Sua Aula</CTAButton>
+          </CTAMargin>
+        </Container>
+      </CTASection>
+
+      {/* Contato Section */}
+      <Section id="contato">
+        <Container>
+          <div>
+            <AboutHeading>
+              Entre em <Accent>Contato</Accent>
+            </AboutHeading>
+          </div>
+
+          <ContactGrid>
+            <div>
+              <SmallHeading>Informações</SmallHeading>
+              <div>
+                <div>
+                  <Label as="p">Endereço</Label>
+                  <MutedText>Rua da Dança, 123 - Centro</MutedText>
+                  <MutedText>São Paulo, SP</MutedText>
+                </div>
+                <div>
+                  <Label as="p">Telefone</Label>
+                  <MutedText>(11) 99999-9999</MutedText>
+                </div>
+                <div>
+                  <Label as="p">Email</Label>
+                  <MutedText>contato@plenartballet.com</MutedText>
+                </div>
+                <div>
+                  <Label as="p">Horário</Label>
+                  <MutedText>Seg-Sex: 14h - 21h</MutedText>
+                  <MutedText>Sábado: 10h - 17h</MutedText>
+                </div>
+              </div>
+            </div>
+
+            <form onSubmit={(e) => e.preventDefault()}>
+              <div>
+                <Label htmlFor="name">Nome</Label>
+                <FormInput id="name" type="text" placeholder="Seu nome" />
+              </div>
+              <div>
+                <Label htmlFor="email">Email</Label>
+                <FormInput id="email" type="email" placeholder="seu@email.com" />
+              </div>
+              <div>
+                <Label htmlFor="message">Mensagem</Label>
+                <FormTextArea id="message" rows={5} placeholder="Sua mensagem..." />
+              </div>
+              <div>
+                <FullWidthButton type="submit">Enviar Mensagem</FullWidthButton>
+              </div>
+            </form>
+          </ContactGrid>
+        </Container>
+      </Section>
+
+      {/* Footer */}
+      <FooterBar>
+
+      <BackToTop className={showTop ? "visible" : ""} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Subir para o topo">
+        <span>Subir</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M18 15l-6-6-6 6" /></svg>
+      </BackToTop>
+        <FooterContainer>
+          <GridFour>
+            <div>
+              <FooterHeading>Plenart Ballet</FooterHeading>
+              <FooterText>Excelência em Dança</FooterText>
+            </div>
+            <div>
+              <FooterHeading>Menu</FooterHeading>
+              <ul>
+                {["Sobre", "Classes", "Instrutores"].map((item) => (
+                  <li key={item}>
+                    <FooterLink as="button" onClick={() => scrollToSection(item.toLowerCase())}>{item}</FooterLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <FooterHeading>Redes Sociais</FooterHeading>
+              <ul>
+                {["Instagram", "Facebook", "TikTok"].map((item) => (
+                  <li key={item}>
+                    <FooterLink href="#">{item}</FooterLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <FooterHeading>Contato</FooterHeading>
+              <FooterText>(11) 99999-9999</FooterText>
+              <FooterText>contato@plenartballet.com</FooterText>
+            </div>
+          </GridFour>
+
+          <FooterBottom>
+            <p>&copy; 2025 Plenart Ballet. Todos os direitos reservados.</p>
+          </FooterBottom>
+        </FooterContainer>
+      </FooterBar>
+
+    </PageWrapper>
   );
 }

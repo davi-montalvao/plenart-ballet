@@ -20,6 +20,41 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Descrição do Projeto
+
+`Plenarte` é o site de uma escola de ballet, construído com Next.js (App Router) e Styled Components. O layout inclui seções para apresentação, classes, instrutores, galeria com carrossel responsivo, menu hamburger no mobile e um botão flutuante "Subir" que aparece ao rolar a página.
+
+Principais pontos:
+- Stack: Next.js 16, React 19, Styled Components.
+- Layout baseado em `app/` (App Router) e estilos em `app/styles.tsx` + `app/globals.css`.
+- Componentes reutilizáveis em `app/components` (ex.: `GalleryCarousel`, `Container`).
+
+## Como rodar (desenvolvimento)
+
+1. Instale as dependências:
+
+```bash
+npm install
+```
+
+2. Rode o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+3. Abra http://localhost:3000 no navegador.
+
+## Notas
+- Tailwind foi removido do projeto; estilos são feitos com Styled Components e CSS global. Se encontrar classes utilitárias do Tailwind (ex.: `flex`, `bg-...`, `text-...`), converta-as para estilos no `app/styles.tsx` ou componentes.
+- Para alterar o carrossel veja `app/components/GalleryCarousel.tsx`.
+
+## Contribuições
+- Abra uma issue ou envie um pull request com melhorias.
+
+---
+
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
