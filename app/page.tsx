@@ -94,7 +94,7 @@ export default function Home() {
               <NavIcon>
                 <img src="/images/miniLogo.png" alt="Plenart mini logo" />
               </NavIcon>
-              <SiteTitle>Plenart Ballet</SiteTitle>
+              <SiteTitle>Plenarte Ballet</SiteTitle>
             </LeftGroup>
 
             <RightGroup>
@@ -134,7 +134,7 @@ export default function Home() {
             <LogoImage src="/logo.png" alt="Plenarte Ballet logo" />
           </LogoWrap>
 
-          <HeroTitle>A Arte do Movimento, a Beleza da Dança</HeroTitle>
+          <HeroTitle>A arte em plenitude</HeroTitle>
 
           <CTAMargin>
             <CTAButton onClick={() => scrollToSection("classes")}>Conheça Nossas Classes</CTAButton>
@@ -153,12 +153,15 @@ export default function Home() {
         <Container>
           <GridTwo>
             <AboutImageWrapper>
-              <img src="/images/aboutUs.png" alt="Sobre a Plenart" loading="lazy" />
+              <img src="/images/aboutUs.png" alt="Sobre a Plenarte" loading="lazy" />
             </AboutImageWrapper>
 
             <div>
               <AboutHeading>Nossa história</AboutHeading>
-              <AboutText>Fundada com paixão pela dança, a Plenart Ballet nasceu do desejo de compartilhar a técnica clássica com um toque contemporâneo e acolhedor.</AboutText>
+              <AboutText>
+                O Plenarte Ballet é um espaço dedicado à formação em dança com profundidade artística, técnica e humana.
+                Sob direção de Fernanda Abreu, a escola propõe um ensino que respeita o desenvolvimento individual, une rigor técnico à sensibilidade e compreende a dança como linguagem, expressão e construção de identidade. Aqui o Ballet é vivido com consciência, tempo e verdade.
+              </AboutText>
 
               <FeaturesGrid>
                 <FeatureItem>
@@ -269,21 +272,21 @@ export default function Home() {
               <div>
                 <div>
                   <Label as="p">Endereço</Label>
-                  <MutedText>Rua da Dança, 123 - Centro</MutedText>
+                  <MutedText>Rua Carlos Weber, 276 - Vila Leopoldina</MutedText>
                   <MutedText>São Paulo, SP</MutedText>
                 </div>
                 <div>
                   <Label as="p">Telefone</Label>
-                  <MutedText>(11) 99999-9999</MutedText>
+                  <MutedText>(11) 93243-3250</MutedText>
                 </div>
                 <div>
                   <Label as="p">Email</Label>
-                  <MutedText>contato@plenartballet.com</MutedText>
+                  <MutedText>contato@plenarteballet.com</MutedText>
                 </div>
                 <div>
                   <Label as="p">Horário</Label>
-                  <MutedText>Seg-Sex: 14h - 21h</MutedText>
-                  <MutedText>Sábado: 10h - 17h</MutedText>
+                  <MutedText>Seg-Sex: 08h - 22h</MutedText>
+                  <MutedText>Sábado: 08h - 12h</MutedText>
                 </div>
               </div>
             </div>
@@ -344,7 +347,7 @@ export default function Home() {
             </div>
             <div>
               <FooterHeading>Contato</FooterHeading>
-              <FooterText>(11) 99999-9999</FooterText>
+              <FooterText>(11) 93243-3250</FooterText>
               <FooterText>contato@plenartballet.com</FooterText>
             </div>
           </GridFour>

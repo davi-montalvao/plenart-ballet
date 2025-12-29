@@ -433,7 +433,6 @@ export const GridTwo = styled.div`
 
   @media (min-width: 768px) {
     grid-template-columns: 46% 1fr;
-    align-items: center;
   }
 `;
 
@@ -611,8 +610,20 @@ export const FooterLink = styled.a`
   font-size: 0.875rem;
   text-decoration: none;
   display: inline-block;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
 
   &:hover { color: white; }
+
+  &:focus {
+    outline: 2px solid rgba(255,255,255,0.12);
+    outline-offset: 2px;
+  }
 `;
 
 export const Accent = styled.span`

@@ -15,8 +15,8 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Plenart Ballet",
-  description: "Escola de Ballet Plenart - Excelência em dança clássica e contemporânea",
+  title: "Plenarte Ballet",
+  description: "Escola de Ballet Plenarte - Excelência em dança clássica e contemporânea",
 };
 
 export default function RootLayout({
