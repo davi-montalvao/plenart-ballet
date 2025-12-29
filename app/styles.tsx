@@ -133,6 +133,7 @@ export const AboutImageWrapper = styled.div`
   height: 360px;
   background-color: #e8e4e0;
   overflow: hidden;
+  border-radius: 0.75rem;
   img {
     width: 100%;
     height: 100%;
