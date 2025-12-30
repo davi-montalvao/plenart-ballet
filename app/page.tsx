@@ -194,8 +194,8 @@ export default function Home() {
             <div className="about">
               <AboutHeading>Sobre Fernanda</AboutHeading>
               <AboutText>
-                Fernanda Abreu é bailarina, pedagoga, psicopedagoga e psicomotricista — além de mãe da Maitê e do Dani. Como diretora do Plenarte Ballet, ela é responsável pela concepção pedagógica e artística da escola e conduz o trabalho valorizando o desenvolvimento individual, a profundidade técnica e a expressão criativa.
-                Abaixo estão algumas fotos que ilustram sua trajetória e momentos importantes de sua atuação.
+                Fernanda Abreu é bailarina, pedagoga, psicopedagoga e psicomotricista, além de mãe da Maitê e do Dani. Como diretora do Plenarte Ballet, é responsável pela concepção pedagógica e artística da escola, conduzindo seu trabalho com foco no desenvolvimento individual, na profundidade técnica e na expressão criativa.
+                As fotos ilustram sua trajetória e momentos marcantes de sua atuação profissional.
               </AboutText>
             </div>
 
@@ -216,13 +216,13 @@ export default function Home() {
 
           <ClassesGrid>
             {[
-              { title: "Baby Class", age: "De 3 a 4 anos", desc: "A introdução lúdica ao ballet. Trabalhamos a coordenação, a musicalidade e a disciplina de forma encantadora para as pequenas bailarinas." },
+              { title: "Baby Class", age: "De 3 à 6 anos", desc: "A introdução lúdica ao ballet. Trabalhamos a coordenação, a musicalidade e a disciplina de forma encantadora para as pequenas bailarinas." },
+              { title: "Ballet Preparatório", age: "De 6 à 7 anos", desc: "Turma de transição do Baby Class para o ballet clássico, com foco em postura, coordenação e musicalidade, de forma lúdica e respeitosa." },
               { title: "Ballet Clássico", age: "A partir de 8 anos", desc: "A base técnica completa para todas as idades. Oferecemos turmas do iniciante ao avançado, focando em postura, técnica e expressão artística." },
               { title: "Ballet Fitness", age: "A partir de 16 anos", desc: "O poder do ballet aliado ao condicionamento físico. Exercícios na barra e no centro focados em tonificação muscular, flexibilidade e postura." },
               { title: "Jazz Dance", age: "A partir de 8 anos", desc: "Liberdade e energia. Uma modalidade vibrante que une a técnica clássica com ritmos modernos, agilidade e muita expressão corporal." },
               { title: "K-Pop", age: "A partir de 8 anos", desc: "Aprenda as coreografias dos seus ídolos. Uma aula dinâmica e divertida, focada em ritmo, sincronia e na cultura pop coreana." },
               { title: "Debutantes e Noivos", age: "Todas as idades", desc: "Consultoria e criação de coreografias personalizadas. Transformamos seu momento especial em uma apresentação única, elegante e inesquecível." },
-              { title: "Ballet Preparatório", age: "De 3 a 4 anos", desc: "Turma de transição do Baby Class para o ballet clássico, com foco em postura, coordenação e musicalidade, de forma lúdica e respeitosa." }
              ].map((cls, idx) => (
               <Card key={idx}>
                 <CardTitle>{cls.title}</CardTitle>
