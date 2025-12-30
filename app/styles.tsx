@@ -4,7 +4,9 @@ import styled from "styled-components";
 
 export const PageWrapper = styled.div`
   min-height: 100vh;
-  background-color: #faf8f6;
+  background-color: rgba(250,248,246,0.65);
+  backdrop-filter: blur(4px);
+  transition: background-color 350ms ease, backdrop-filter 350ms ease;
 `;
 
 export const NavBar = styled.nav`
@@ -12,8 +14,9 @@ export const NavBar = styled.nav`
   width: 100%;
   top: 0;
   z-index: 50;
-  background-color: rgba(250, 248, 246, 0.95);
-  border-bottom: 1px solid #e8e4e0;
+  background-color: rgba(250, 248, 246, 0.78);
+  border-bottom: 1px solid rgba(232,228,224,0.7);
+  transition: background-color 300ms ease, border-color 300ms ease, backdrop-filter 300ms ease;
 `;
 
 export const NavIcon = styled.div`
@@ -121,6 +124,8 @@ export const HeroImage = styled.div`
   margin-right: auto;
   border-radius: 0.75rem;
   overflow: hidden;
+  background-color: rgba(255,255,255,0.35);
+  transition: background-color 350ms ease, box-shadow 350ms ease, transform 350ms ease;
   img {
     width: 100%;
     height: 100%;
@@ -131,15 +136,21 @@ export const HeroImage = styled.div`
 
 export const AboutImageWrapper = styled.div`
   height: 360px;
-  background-color: #e8e4e0;
+  background-color: rgba(232,228,224,0.45);
   overflow: hidden;
   border-radius: 0.75rem;
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center top;
     display: block;
   }
+  
+  @media (min-width: 768px) {
+    img { object-position: center center; }
+  }
+  transition: background-color 300ms ease, transform 300ms ease;
 `;
 
 export const NavInner = styled.div`
@@ -243,12 +254,13 @@ export const BodyText = styled.p`
 
 export const InstructorImageBox = styled.div`
   height: 280px;
-  background-color: #e8e4e0;
+  background-color: rgba(232,228,224,0.45);
   border-radius: 0.5rem;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: background-color 300ms ease, transform 300ms ease;
 `;
 
 export const EmojiLarge = styled.span`
@@ -258,10 +270,10 @@ export const EmojiLarge = styled.span`
 export const GalleryItem = styled.div`
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-  transition: box-shadow 150ms ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: box-shadow 280ms ease, background-color 300ms ease, transform 300ms ease;
   height: 300px;
-  background-color: #e8e4e0;
+  background-color: rgba(232,228,224,0.38);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -290,10 +302,12 @@ export const Slide = styled.div`
   align-items: center;
   justify-content: center;
   height: 340px;
-  background-color: transparent;
+  background-color: rgba(255,255,255,0.6);
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 18px 48px rgba(0,0,0,0.18);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.12);
+
+  transition: transform 350ms ease, box-shadow 350ms ease, background-color 350ms ease;
 
   @media (min-width: 1024px) {
     min-width: 320px;
@@ -308,6 +322,7 @@ export const SlideImage = styled.img`
   object-fit: cover;
   display: block;
   border-radius: 1rem;
+  transition: transform 350ms ease, opacity 350ms ease;
 `;
 
 export const CarouselNavButton = styled.button`

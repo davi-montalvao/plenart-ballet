@@ -142,6 +142,7 @@ export default function Home() {
 
           <HeroImage>
             <picture>
+              <source media="(max-width: 767px)" srcSet="/images/classes-hero-mobile.png" type="image/png" />
               <source srcSet="/images/classes-hero.png" type="image/png" />
               <img src="/images/classes-hero.png" alt="Aula de balé" loading="lazy" />
             </picture>
