@@ -267,20 +267,6 @@ export const EmojiLarge = styled.span`
   font-size: 3rem;
 `;
 
-export const GalleryItem = styled.div`
-  border-radius: 0.5rem;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  transition: box-shadow 280ms ease, background-color 300ms ease, transform 300ms ease;
-  height: 300px;
-  background-color: rgba(232,228,224,0.38);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &:hover { box-shadow: 0 6px 20px rgba(0,0,0,0.08); }
-`;
-
 export const CarouselContainer = styled.div`
   position: relative;
   width: 100%;
@@ -452,6 +438,23 @@ export const GridTwo = styled.div`
   }
 `;
 
+export const FernandaGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  grid-template-areas:
+    "about"
+    "carousel";
+
+  & > .about { grid-area: about; }
+  & > .carousel { grid-area: carousel; }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 75% 1fr;
+    grid-template-areas: "carousel about";
+  }
+`;
+
 export const NavLinksContainer = styled.div`
   display: none;
   gap: 1rem;
@@ -529,15 +532,6 @@ export const InstructorCard = styled.div`
   text-align: center;
 `;
 
-export const GalleryGrid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-`;
 
 export const CTASection = styled.section`
   padding: 3rem 2rem;

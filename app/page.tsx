@@ -58,13 +58,13 @@ import {
   InstructorImageBox,
   Specialty,
   EmojiLarge,
-  GalleryGrid,
-  GalleryItem,
   GridFour,
   SobreSection,
+  FernandaGrid,
 } from "./styles";
 import GalleryCarousel from "./components/GalleryCarousel";
 import { CarouselContainer } from "./styles";
+import FernandaCarousel from "./components/FernandaCarousel";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -182,6 +182,29 @@ export default function Home() {
           </GridTwo>
         </Container>
       </SobreSection>
+
+      <Section id="fernanda">
+        <Container>
+          <SectionHeader>
+            <SectionTitle>Fernanda <Accent>Abreu</Accent></SectionTitle>
+            <SectionSubtitle>Diretora, fundadora e responsável pelo Plenarte Ballet.</SectionSubtitle>
+          </SectionHeader>
+
+          <FernandaGrid>
+            <div className="about">
+              <AboutHeading>Sobre Fernanda</AboutHeading>
+              <AboutText>
+                Fernanda Abreu é bailarina, pedagoga, psicopedagoga e psicomotricista — além de mãe da Maitê e do Dani. Como diretora do Plenarte Ballet, ela é responsável pela concepção pedagógica e artística da escola e conduz o trabalho valorizando o desenvolvimento individual, a profundidade técnica e a expressão criativa.
+                Abaixo estão algumas fotos que ilustram sua trajetória e momentos importantes de sua atuação.
+              </AboutText>
+            </div>
+
+            <div className="carousel">
+              <FernandaCarousel />
+            </div>
+          </FernandaGrid>
+        </Container>
+      </Section>
 
       {/* Classes Section */}
       <Section id="classes">
