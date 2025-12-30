@@ -72,11 +72,14 @@ export default function Home() {
 
   useEffect(() => {
     function onScroll() {
-      setShowTop(window.scrollY > 300);
+      const y = window.scrollY;
+      setShowTop(y > 0);
     }
     onScroll();
     window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
   }, []);
 
   function scrollToSection(id: string) {
@@ -190,13 +193,14 @@ export default function Home() {
 
           <ClassesGrid>
             {[
-              { title: "Ballet Clássico Infantil", age: "A partir de 4 anos", desc: "Introdução à técnica clássica com foco em desenvolvimento motor." },
-              { title: "Ballet Clássico Intermediário", age: "A partir de 8 anos", desc: "Aprofundamento técnico e preparação para pontas." },
-              { title: "Ballet Contemporâneo", age: "A partir de 10 anos", desc: "Exploração de movimentos modernos mantendo base clássica." },
-              { title: "Ballet Adulto", age: "Sem limite de idade", desc: "Classes para adultos que desejam aprender ou retomar." },
-              { title: "Preparatório", age: "Iniciantes", desc: "Nivelamento técnico antes de ingressar nas classes regulares." },
-              { title: "Intensivo de Verão", age: "Todas as idades", desc: "Programa especial de imersão durante as férias escolares." }
-            ].map((cls, idx) => (
+              { title: "Baby Class", age: "De 3 a 4 anos", desc: "A introdução lúdica ao ballet. Trabalhamos a coordenação, a musicalidade e a disciplina de forma encantadora para as pequenas bailarinas." },
+              { title: "Ballet Clássico", age: "A partir de 8 anos", desc: "A base técnica completa para todas as idades. Oferecemos turmas do iniciante ao avançado, focando em postura, técnica e expressão artística." },
+              { title: "Ballet Fitness", age: "A partir de 16 anos", desc: "O poder do ballet aliado ao condicionamento físico. Exercícios na barra e no centro focados em tonificação muscular, flexibilidade e postura." },
+              { title: "Jazz Dance", age: "A partir de 8 anos", desc: "Liberdade e energia. Uma modalidade vibrante que une a técnica clássica com ritmos modernos, agilidade e muita expressão corporal." },
+              { title: "K-Pop", age: "A partir de 8 anos", desc: "Aprenda as coreografias dos seus ídolos. Uma aula dinâmica e divertida, focada em ritmo, sincronia e na cultura pop coreana." },
+              { title: "Debutantes e Noivos", age: "Todas as idades", desc: "Consultoria e criação de coreografias personalizadas. Transformamos seu momento especial em uma apresentação única, elegante e inesquecível." },
+              { title: "Ballet Preparatório", age: "De 3 a 4 anos", desc: "Turma de transição do Baby Class para o ballet clássico, com foco em postura, coordenação e musicalidade, de forma lúdica e respeitosa." }
+             ].map((cls, idx) => (
               <Card key={idx}>
                 <CardTitle>{cls.title}</CardTitle>
                 <Specialty>{cls.age}</Specialty>
@@ -316,10 +320,15 @@ export default function Home() {
       {/* Footer */}
       <FooterBar>
 
-      <BackToTop className={showTop ? "visible" : ""} onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} aria-label="Subir para o topo">
+      <BackToTop
+        className={showTop ? "visible" : ""}
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        aria-label="Subir para o topo"
+      >
         <span>Subir</span>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d="M18 15l-6-6-6 6" /></svg>
       </BackToTop>
+
         <FooterContainer>
           <GridFour>
             <div>

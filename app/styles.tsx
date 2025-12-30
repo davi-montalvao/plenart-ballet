@@ -146,7 +146,7 @@ export const AboutImageWrapper = styled.div`
     object-position: center top;
     display: block;
   }
-  
+
   @media (min-width: 768px) {
     img { object-position: center center; }
   }
@@ -484,10 +484,11 @@ export const BackToTop = styled.button`
   border-radius: 9999px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
   cursor: pointer;
-  z-index: 400;
+  z-index: 9999;
   opacity: 0;
   transform: translateY(8px);
   transition: opacity 200ms ease, transform 200ms ease;
+  pointer-events: none;
 
   &.visible {
     opacity: 1;
@@ -500,6 +501,10 @@ export const BackToTop = styled.button`
   @media (min-width: 768px) {
     right: 2rem;
     bottom: 2rem;
+  }
+  @media (max-width: 767px) {
+    /* raise button on small screens so it's visible earlier (not stuck at footer) */
+    bottom: 10vh;
   }
 `;
 
