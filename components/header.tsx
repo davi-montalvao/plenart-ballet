@@ -41,7 +41,9 @@ export function Header() {
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         isScrolled 
           ? "bg-background/80 backdrop-blur-md py-4" 
-          : "py-6 lg:py-8"
+          : isMobileMenuOpen
+            ? "bg-white dark:bg-card py-6 lg:py-8 lg:bg-transparent"
+            : "py-6 lg:py-8"
       }`}
     >
       <div className="container mx-auto px-6 lg:px-20">
@@ -104,8 +106,8 @@ export function Header() {
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-500 ${
-            isMobileMenuOpen ? "max-h-64 mt-6" : "max-h-0"
+          className={`lg:hidden overflow-hidden transition-all duration-500 bg-white dark:bg-card ${
+            isMobileMenuOpen ? "max-h-80 mt-6 -mx-6 px-6" : "max-h-0"
           }`}
         >
           <nav className="flex flex-col gap-4 pb-4">
