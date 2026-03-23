@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Clock } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 type ScheduleItem = { time: string; class: string }
 
@@ -58,19 +59,11 @@ const scheduleData: Record<string, ScheduleItem[]> = {
   ],
 }
 
-const dayLabels: Record<string, string> = {
-  segunda: "Segunda-feira",
-  terca: "Terça-feira",
-  quarta: "Quarta-feira",
-  quinta: "Quinta-feira",
-  sexta: "Sexta-feira",
-  sabado: "Sábado",
-}
-
-const dayOrder = ["segunda", "terca", "quarta", "quinta", "sexta", "sabado"]
+const dayOrder = ["segunda", "terca", "quarta", "quinta", "sexta", "sabado"] as const
 
 export function Schedule() {
-  const [activeDay, setActiveDay] = useState("segunda")
+  const { t } = useLanguage()
+  const [activeDay, setActiveDay] = useState<string>("segunda")
   const [isVisible, setIsVisible] = useState(false)
   const [itemsVisible, setItemsVisible] = useState(false)
 
@@ -93,11 +86,11 @@ export function Schedule() {
           }`}
         >
           <p className="text-sm uppercase tracking-[0.3em] text-[var(--nude-warm)] mb-6">
-            Grade de Aulas
+            {t.schedule.label}
           </p>
           <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-light leading-[1.1] text-balance text-foreground">
-            Nossos
-            <span className="italic font-medium text-[var(--petroleo)]"> horários</span>
+            {t.schedule.title}
+            <span className="italic font-medium text-[var(--petroleo)]"> {t.schedule.titleHighlight}</span>
           </h2>
         </div>
 
@@ -114,7 +107,7 @@ export function Schedule() {
               >
                 {dayOrder.map((day) => (
                   <option key={day} value={day}>
-                    {dayLabels[day]}
+                    {t.schedule.days[day]}
                   </option>
                 ))}
               </select>
@@ -135,7 +128,7 @@ export function Schedule() {
                     }
                   `}
                 >
-                  <span className="font-serif text-lg">{dayLabels[day]}</span>
+                  <span className="font-serif text-lg">{t.schedule.days[day]}</span>
                 </button>
               ))}
             </div>
@@ -150,7 +143,7 @@ export function Schedule() {
               <div className="bg-card rounded-xl border border-border overflow-hidden shadow-sm">
                 <div className="px-4 py-4 lg:px-6 lg:py-5 border-b border-border bg-[var(--section)]/50">
                   <h3 className="font-serif text-xl lg:text-2xl text-foreground">
-                    {dayLabels[activeDay]}
+                    {t.schedule.days[activeDay as keyof typeof t.schedule.days]}
                   </h3>
                 </div>
                 <div className="divide-y divide-border">
@@ -177,7 +170,7 @@ export function Schedule() {
                 </div>
                 {(scheduleData[activeDay] || []).length === 0 && (
                   <div className="px-6 py-12 text-center text-muted-foreground">
-                    Nenhuma aula neste dia
+                    {t.schedule.noClass}
                   </div>
                 )}
               </div>

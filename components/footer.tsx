@@ -2,8 +2,10 @@
 
 import Link from 'next/link';
 import { ArrowUp } from 'lucide-react';
+import { useLanguage } from '@/contexts/language-context';
 
 export function Footer() {
+  const { t } = useLanguage();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -28,49 +30,49 @@ export function Footer() {
               href="#sobre"
               className="hover-underline hover:text-foreground transition-colors"
             >
-              Sobre
+              {t.nav.sobre}
             </Link>
             <Link
               href="#sobre-fernanda"
               className="hover-underline hover:text-foreground transition-colors"
             >
-              Fernanda
+              {t.nav.fernanda}
             </Link>
             <Link
               href="#instrutores"
               className="hover-underline hover:text-foreground transition-colors"
             >
-              Instrutores
+              {t.nav.instrutores}
             </Link>
             <Link
               href="#espetaculo"
               className="hover-underline hover:text-foreground transition-colors"
             >
-              Espetáculo
+              {t.nav.espetaculo}
             </Link>
             <Link
               href="#classes"
               className="hover-underline hover:text-foreground transition-colors"
             >
-              Classes
+              {t.nav.classes}
             </Link>
             <Link
               href="#passos"
               className="hover-underline hover:text-foreground transition-colors"
             >
-              O Balé
+              {t.nav.balé}
             </Link>
             <Link
               href="#horarios"
               className="hover-underline hover:text-foreground transition-colors"
             >
-              Horários
+              {t.nav.horarios}
             </Link>
             <Link
               href="#contato"
               className="hover-underline hover:text-foreground transition-colors"
             >
-              Contato
+              {t.nav.contato}
             </Link>
           </nav>
 
@@ -80,7 +82,7 @@ export function Footer() {
             className="group flex items-center gap-3 text-sm uppercase tracking-wider self-start lg:self-auto transition-all duration-300"
           >
             <span className="text-muted-foreground group-hover:text-foreground transition-colors">
-              Voltar ao Topo
+              {t.footer.backToTop}
             </span>
             <div className="w-10 h-10 rounded-full border border-border flex items-center justify-center group-hover:bg-[var(--petroleo)] group-hover:border-[var(--petroleo)] transition-all duration-300">
               <ArrowUp className="w-4 h-4 group-hover:text-[var(--off-white)] transition-colors" />
@@ -96,7 +98,7 @@ export function Footer() {
         </div>
 
         <p className="mt-8 text-center text-sm text-muted-foreground">
-          © 2026 Plenarte Ballet. Todos os direitos reservados.
+          {t.footer.copyright}
         </p>
       </div>
     </footer>

@@ -2,41 +2,19 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
+import { useLanguage } from "@/contexts/language-context"
 
 const instructors = [
-  {
-    name: "Fernanda Abreu",
-    role: "Diretora e professora de Baby Class, Preparatório, Clássico e Fitness",
-    image: "/images/galery/fernanda.png",
-  },
-  {
-    name: "Helena Del Mercato",
-    role: "Ballet Fitness e Jazz",
-    image: "/images/galery/helena.png",
-  },
-  {
-    name: "Carol Verutti",
-    role: "Baby Class, Ballet Clássico e KPop",
-    image: "/images/galery/carol.png",
-  },
-  {
-    name: "Letícia Salviato",
-    role: "Baby Class e Ballet Clássico",
-    image: "/images/galery/leticia.png",
-  },
-  {
-    name: "Luana Lavareda",
-    role: "Baby Class, Ballet Clássico e Jazz",
-    image: "/images/galery/luana.png",
-  },
-  {
-    name: "Rafaela Mantuanelli",
-    role: "Baby Class e Ballet Clássico",
-    image: "/images/galery/rafa.png",
-  },
+  { name: "Fernanda Abreu", roleKey: "fernanda", image: "/images/galery/fernanda.png" },
+  { name: "Helena Del Mercato", roleKey: "helena", image: "/images/galery/helena.png" },
+  { name: "Carol Verutti", roleKey: "carol", image: "/images/galery/carol.png" },
+  { name: "Letícia Salviato", roleKey: "leticia", image: "/images/galery/leticia.png" },
+  { name: "Luana Lavareda", roleKey: "luana", image: "/images/galery/luana.png" },
+  { name: "Rafaela Mantuanelli", roleKey: "rafa", image: "/images/galery/rafa.png" },
 ]
 
 export function Instructors() {
+  const { t } = useLanguage()
   const [visibleItems, setVisibleItems] = useState<number[]>([])
   const sectionRef = useRef<HTMLElement>(null)
 
@@ -69,10 +47,10 @@ export function Instructors() {
         {/* Section Header */}
         <div className="mb-16 md:mb-24">
           <span className="text-[var(--nude-warm)] text-sm tracking-[0.3em] uppercase mb-4 block">
-            Nossa Equipe
+            {t.instructors.label}
           </span>
           <h2 className="font-serif text-4xl md:text-6xl lg:text-7xl font-medium text-foreground text-balance max-w-3xl">
-            Nossas Instrutoras
+            {t.instructors.title}
           </h2>
         </div>
 
@@ -107,7 +85,7 @@ export function Instructors() {
                   {instructor.name}
                 </h3>
                 <p className="text-[var(--nude-warm)] text-sm tracking-wide mt-1">
-                  {instructor.role}
+                  {t.instructors.roles[instructor.roleKey as keyof typeof t.instructors.roles]}
                 </p>
               </div>
             </article>
@@ -117,7 +95,7 @@ export function Instructors() {
         {/* CTA */}
         <div className="mt-20 text-center">
           <p className="text-[var(--muted-foreground)] mb-6 text-lg">
-            Conheça nossa equipe e agende uma aula experimental
+            {t.instructors.cta}
           </p>
           <a
             href="https://wa.me/5511932433250"
@@ -125,7 +103,7 @@ export function Instructors() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 bg-[var(--petroleo)] text-[var(--off-white)] px-8 py-4 text-sm tracking-wider uppercase hover:bg-[var(--soft-black)] transition-colors duration-300"
           >
-            <span>Agendar Aula</span>
+            <span>{t.instructors.agendar}</span>
             <svg 
               className="w-4 h-4" 
               fill="none" 

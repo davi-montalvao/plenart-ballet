@@ -3,8 +3,11 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Moon, Sun, Menu, X } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
+import { LanguageSwitcher } from "@/components/language-switcher"
 
 export function Header() {
+  const { t } = useLanguage()
   const [isDark, setIsDark] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -26,14 +29,14 @@ export function Header() {
   }, [isDark])
 
   const navItems = [
-    { href: "#sobre", label: "Sobre" },
-    { href: "#sobre-fernanda", label: "Fernanda" },
-    { href: "#instrutores", label: "Instrutores" },
-    { href: "#espetaculo", label: "Espetáculo" },
-    { href: "#classes", label: "Classes" },
-    { href: "#passos", label: "O Balé" },
-    { href: "#horarios", label: "Horários" },
-    { href: "#contato", label: "Contato" },
+    { href: "#sobre", label: t.nav.sobre },
+    { href: "#sobre-fernanda", label: t.nav.fernanda },
+    { href: "#instrutores", label: t.nav.instrutores },
+    { href: "#espetaculo", label: t.nav.espetaculo },
+    { href: "#classes", label: t.nav.classes },
+    { href: "#passos", label: t.nav.balé },
+    { href: "#horarios", label: t.nav.horarios },
+    { href: "#contato", label: t.nav.contato },
   ]
 
   return (
@@ -75,8 +78,9 @@ export function Header() {
             ))}
           </nav>
 
-          {/* Theme Toggle & Mobile Menu */}
-          <div className="flex items-center gap-4">
+          {/* Language, Theme Toggle & Mobile Menu */}
+          <div className="flex items-center gap-3">
+            <LanguageSwitcher />
             <button
               onClick={() => setIsDark(!isDark)}
               className="w-8 h-8 rounded-full bg-[var(--petroleo)] dark:bg-[var(--nude-warm)] flex items-center justify-center transition-transform hover:scale-110"

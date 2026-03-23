@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/language-context';
 
 const images = Array.from({ length: 11 }, (_, i) => ({
   src: `/images/galery/fe${i + 1}.png`,
@@ -11,6 +12,7 @@ const images = Array.from({ length: 11 }, (_, i) => ({
 }));
 
 export function AboutFernanda() {
+  const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -68,7 +70,7 @@ export function AboutFernanda() {
             }`}
           >
             <p className="text-sm uppercase tracking-[0.3em] text-[var(--nude-warm)] mb-4">
-              Sobre Fernanda
+              {t.aboutFernanda.title}
             </p>
 
             <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-light leading-[1.1] mb-4 text-balance text-foreground">
@@ -76,17 +78,11 @@ export function AboutFernanda() {
             </h2>
 
             <p className="text-muted-foreground text-lg mb-8">
-              Diretora, fundadora e responsável pelo Plenarte Ballet.
+              {t.aboutFernanda.subtitle}
             </p>
 
             <p className="text-foreground leading-relaxed text-lg">
-              Fernanda Abreu é bailarina, pedagoga, psicopedagoga e
-              psicomotricista, além de mãe da Maitê e do Dani. Como diretora do
-              Plenarte Ballet, é responsável pela concepção pedagógica e
-              artística da escola, conduzindo seu trabalho com foco no
-              desenvolvimento individual, na profundidade técnica e na expressão
-              criativa. As fotos ilustram sua trajetória e momentos marcantes de
-              sua atuação profissional.
+              {t.aboutFernanda.description}
             </p>
           </div>
 

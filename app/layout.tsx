@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Lora } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { LanguageProvider } from '@/contexts/language-context'
 import './globals.css'
 
 const playfair = Playfair_Display({ 
@@ -32,8 +33,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="transition-colors duration-500">
       <body className={`${playfair.variable} ${lora.variable} font-sans antialiased transition-colors duration-500`}>
-        {children}
-        <Analytics />
+        <LanguageProvider>
+          {children}
+          <Analytics />
+        </LanguageProvider>
       </body>
     </html>
   )

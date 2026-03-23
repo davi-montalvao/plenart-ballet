@@ -3,8 +3,10 @@
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import { ArrowDown } from 'lucide-react';
+import { useLanguage } from '@/contexts/language-context';
 
 export function Hero() {
+  const { t } = useLanguage();
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
@@ -23,7 +25,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <section className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -40,7 +42,7 @@ export function Hero() {
       <div className="container mx-auto px-6 lg:px-20 relative z-10 pt-32">
         <div className="max-w-4xl">
           <p className="text-sm uppercase tracking-[0.3em] text-muted-foreground mb-6 animate-fade-in-up opacity-0">
-            Bem-vindo à
+            {t.hero.welcome}
           </p>
 
           <h1 className="font-serif text-5xl sm:text-6xl lg:text-8xl xl:text-9xl font-light leading-[0.9] mb-8 text-balance animate-fade-in-up opacity-0 animation-delay-100">
@@ -49,8 +51,7 @@ export function Hero() {
           </h1>
 
           <p className="text-lg lg:text-xl text-muted-foreground max-w-xl leading-relaxed mb-12 animate-fade-in-up opacity-0 animation-delay-200">
-            Uma jornada pela elegância e expressão da dança. Descubra a magia do
-            ballet na Plenarte.
+            {t.hero.subtitle}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up opacity-0 animation-delay-300">
@@ -58,7 +59,7 @@ export function Hero() {
               href="#classes"
               className="group inline-flex items-center gap-3 bg-[var(--petroleo)] text-[var(--off-white)] px-8 py-4 text-sm uppercase tracking-wider hover:gap-5 hover:bg-[var(--soft-black)] transition-all duration-300"
             >
-              Conheça Nossas Classes
+              {t.hero.ctaClasses}
               <ArrowDown className="w-4 h-4 rotate-[-90deg] group-hover:translate-x-1 transition-transform" />
             </a>
             <a
@@ -67,7 +68,7 @@ export function Hero() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-4 text-sm uppercase tracking-wider border border-[var(--nude-warm)] text-foreground hover:bg-[var(--nude-warm)] hover:text-[var(--off-white)] transition-colors"
             >
-              Agendar Aula
+              {t.hero.ctaAgendar}
             </a>
           </div>
         </div>
@@ -104,7 +105,7 @@ export function Hero() {
           </span>
         </div>
         <span className="text-sm uppercase tracking-wider text-muted-foreground">
-          Role para descobrir
+          {t.hero.scrollDiscover}
         </span>
       </div>
     </section>

@@ -2,10 +2,12 @@
 
 import { useEffect, useRef, useState } from "react"
 import { ArrowUpRight, Instagram, Phone, Mail, MapPin, Clock } from "lucide-react"
+import { useLanguage } from "@/contexts/language-context"
 
 const WHATSAPP_URL = "https://wa.me/5511932433250"
 
 export function Contact() {
+  const { t } = useLanguage()
   const sectionRef = useRef<HTMLElement>(null)
   const [isVisible, setIsVisible] = useState(false)
 
@@ -33,15 +35,14 @@ export function Contact() {
             }`}
           >
             <p className="text-sm uppercase tracking-[0.3em] text-[var(--nude-warm)] mb-6">
-              Contato
+              {t.contact.title}
             </p>
             <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-light leading-[1.1] mb-8 text-balance text-foreground">
-              Pronto para
-              <span className="italic font-medium text-[var(--petroleo)]"> dançar?</span>
+              {t.contact.heading}
+              <span className="italic font-medium text-[var(--petroleo)]"> {t.contact.headingHighlight}</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed max-w-md mb-12">
-              Agende uma aula experimental e descubra a magia da dança. 
-              Estamos ansiosos para conhecer você e iniciar essa jornada juntos.
+              {t.contact.description}
             </p>
 
             <a
@@ -50,7 +51,7 @@ export function Contact() {
               rel="noopener noreferrer"
               className="group inline-flex items-center gap-3 bg-[var(--petroleo)] text-[var(--off-white)] px-8 py-4 text-sm uppercase tracking-wider hover:gap-5 hover:bg-[var(--soft-black)] transition-all duration-300"
             >
-              Agendar Aula pelo WhatsApp
+              {t.contact.cta}
               <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
             </a>
           </div>
@@ -67,8 +68,8 @@ export function Contact() {
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-muted-foreground block">Endereço</span>
-                  <span>Rua Carlos Weber, 276 - Vila Leopoldina<br />São Paulo, SP</span>
+                  <span className="text-xs uppercase tracking-wider text-muted-foreground block">{t.contact.address}</span>
+                  <span>{t.contact.addressLine1}<br />{t.contact.addressLine2}</span>
                 </div>
               </div>
 
@@ -82,7 +83,7 @@ export function Contact() {
                   <Phone className="w-5 h-5 group-hover:text-[var(--off-white)] transition-colors" />
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-muted-foreground block">Telefone</span>
+                  <span className="text-xs uppercase tracking-wider text-muted-foreground block">{t.contact.phone}</span>
                   <span className="hover-underline">(11) 93243-3250</span>
                 </div>
               </a>
@@ -95,7 +96,7 @@ export function Contact() {
                   <Mail className="w-5 h-5 group-hover:text-[var(--off-white)] transition-colors" />
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-muted-foreground block">Email</span>
+                  <span className="text-xs uppercase tracking-wider text-muted-foreground block">{t.contact.email}</span>
                   <span className="hover-underline">plenarteballet@gmail.com</span>
                 </div>
               </a>
@@ -105,8 +106,8 @@ export function Contact() {
                   <Clock className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-muted-foreground block">Horário</span>
-                  <span>Seg-Sex: 08h - 22h<br />Sábado: 08h - 12h</span>
+                  <span className="text-xs uppercase tracking-wider text-muted-foreground block">{t.contact.hours}</span>
+                  <span>{t.contact.hoursLine1}<br />{t.contact.hoursLine2}</span>
                 </div>
               </div>
 
@@ -120,7 +121,7 @@ export function Contact() {
                   <Instagram className="w-5 h-5 group-hover:text-[var(--off-white)] transition-colors" />
                 </div>
                 <div>
-                  <span className="text-xs uppercase tracking-wider text-muted-foreground block">Instagram</span>
+                  <span className="text-xs uppercase tracking-wider text-muted-foreground block">{t.contact.instagram}</span>
                   <span className="hover-underline">@plenarteballet</span>
                 </div>
               </a>

@@ -2,41 +2,19 @@
 
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
+import { useLanguage } from "@/contexts/language-context"
 
-const steps = [
-  {
-    id: "plie",
-    name: "Plié",
-    description: "Flexão dos joelhos mantendo o alinhamento. Base para saltos e aterrissagens, trabalhando força e elasticidade.",
-    image: "/images/ballet/plie.png",
-  },
-  {
-    id: "tendu",
-    name: "Tendu",
-    description: "Pé desliza no chão até estender completamente, alongando a perna. Fundamental para a precisão e a linha do pé.",
-    image: "/images/ballet/tendu.png",
-  },
-  {
-    id: "arabesque",
-    name: "Arabesque",
-    description: "Pose em que uma perna fica de apoio e a outra estendida atrás, com os braços em harmonia. Um dos ícones do ballet.",
-    image: "/images/ballet/arabesque.png",
-  },
-  {
-    id: "pirouette",
-    name: "Pirouette",
-    description: "Giro completo sobre uma perna. Exige eixo, equilíbrio e coordenação entre olhar, braços e pernas.",
-    image: "/images/ballet/pirouette.png",
-  },
-  {
-    id: "grand-jete",
-    name: "Grand Jeté",
-    description: "Salto em que as pernas se abrem no ar em split. Combina impulsão, flexibilidade e expressão.",
-    image: "/images/ballet/grand-jete.png",
-  },
-]
+const stepIds = ["plie", "tendu", "arabesque", "pirouette", "grandJete"] as const
+const stepImages: Record<string, string> = {
+  plie: "/images/ballet/plie.png",
+  tendu: "/images/ballet/tendu.png",
+  arabesque: "/images/ballet/arabesque.png",
+  pirouette: "/images/ballet/pirouette.png",
+  grandJete: "/images/ballet/grand-jete.png",
+}
 
 export function BalletSteps() {
+  const { t } = useLanguage()
   const sectionRef = useRef<HTMLElement>(null)
   const [visibleItems, setVisibleItems] = useState<number[]>([])
 
@@ -64,22 +42,24 @@ export function BalletSteps() {
         {/* Header */}
         <div className="mb-20 lg:mb-28">
           <p className="text-sm uppercase tracking-[0.3em] text-[var(--nude-warm)] mb-6">
-            O Balé
+            {t.balletSteps.label}
           </p>
           <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-light leading-[1.1] text-balance text-foreground">
-            Passos do
-            <span className="italic font-medium text-[var(--petroleo)]"> Ballet</span>
+            {t.balletSteps.title}
+            <span className="italic font-medium text-[var(--petroleo)]"> {t.balletSteps.titleHighlight}</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mt-6 text-lg leading-relaxed">
-            Alguns dos movimentos clássicos que você encontra nas aulas
+            {t.balletSteps.subtitle}
           </p>
         </div>
 
         {/* Steps Grid */}
         <div className="space-y-16 lg:space-y-24">
-          {steps.map((step, index) => (
+          {stepIds.map((id, index) => {
+            const step = t.balletSteps.steps[id]
+            return (
             <article
-              key={step.id}
+              key={id}
               data-step-index={index}
               className={`grid lg:grid-cols-2 gap-12 lg:gap-20 items-center transition-all duration-700 ease-out ${
                 visibleItems.includes(index)
@@ -98,7 +78,7 @@ export function BalletSteps() {
               >
                 <div className="absolute inset-0 rounded-xl overflow-hidden bg-white/80 shadow-sm border border-white/50">
                   <Image
-                    src={step.image}
+                    src={stepImages[id]}
                     alt={step.name}
                     fill
                     className="object-contain p-8"
@@ -120,7 +100,8 @@ export function BalletSteps() {
                 </p>
               </div>
             </article>
-          ))}
+          );
+          })}
         </div>
       </div>
     </section>

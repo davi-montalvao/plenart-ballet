@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { ArrowUpRight } from 'lucide-react';
+import { useLanguage } from '@/contexts/language-context';
 
 const images = [
   {
@@ -58,6 +58,7 @@ const images = [
 ];
 
 export function Spectacle() {
+  const { t } = useLanguage();
   const sectionRef = useRef<HTMLElement>(null);
   const [isVisible, setIsVisible] = useState(false);
   const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
@@ -110,13 +111,13 @@ export function Spectacle() {
         >
           <div>
             <p className="text-sm uppercase tracking-[0.3em] text-[var(--nude-warm)] mb-6">
-              Espetáculo 2025
+              {t.spectacle.label}
             </p>
             <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-light leading-[1.1] text-balance text-foreground">
-              Registros especiais do nosso
+              {t.spectacle.title}
               <span className="italic font-medium block text-[var(--petroleo)]">
                 {' '}
-                espetáculo anual
+                {t.spectacle.titleHighlight}
               </span>
             </h2>
           </div>
@@ -165,7 +166,7 @@ export function Spectacle() {
               10+
             </span>
             <p className="text-sm text-[var(--off-white)]/70 mt-4 uppercase tracking-wider">
-              Anos de tradição
+              {t.spectacle.stat1}
             </p>
           </div>
           <div className="p-8 bg-[var(--nude-warm)] rounded-lg transition-transform duration-300 hover:scale-[1.02]">
@@ -173,7 +174,7 @@ export function Spectacle() {
               100+
             </span>
             <p className="text-sm text-foreground/70 mt-4 uppercase tracking-wider">
-              Alunos formados
+              {t.spectacle.stat2}
             </p>
           </div>
           <div className="p-8 bg-[var(--petroleo)] rounded-lg transition-transform duration-300 hover:scale-[1.02]">
@@ -181,7 +182,7 @@ export function Spectacle() {
               10+
             </span>
             <p className="text-sm text-[var(--off-white)]/70 mt-4 uppercase tracking-wider">
-              Espetáculos realizados
+              {t.spectacle.stat3}
             </p>
           </div>
         </div>
