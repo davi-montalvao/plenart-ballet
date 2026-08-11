@@ -45,7 +45,7 @@ export function Footer() {
               {t.nav.instrutores}
             </Link>
             <Link
-              href="#espetaculo"
+              href="#reino-dos-doces"
               className="hover-underline hover:text-foreground transition-colors"
             >
               {t.nav.espetaculo}

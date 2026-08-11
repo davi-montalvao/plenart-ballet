@@ -11,6 +11,7 @@ const instructors = [
   { name: "Letícia Salviato", roleKey: "leticia", image: "/images/galery/leticia.png" },
   { name: "Luana Lavareda", roleKey: "luana", image: "/images/galery/luana.png" },
   { name: "Rafaela Mantuanelli", roleKey: "rafa", image: "/images/galery/rafa.png" },
+  { name: "Sérgio Rodrigues", roleKey: "sergio", image: "/images/galery/sergio.png" },
 ]
 
 export function Instructors() {

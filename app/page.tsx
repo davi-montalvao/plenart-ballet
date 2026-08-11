@@ -7,6 +7,7 @@ import { ClassStructure } from "@/components/class-structure"
 import { Classes } from "@/components/classes"
 import { Schedule } from "@/components/schedule"
 import { Instructors } from "@/components/instructors"
+import { SpectacleTeaser } from "@/components/spectacle-teaser"
 import { Spectacle } from "@/components/spectacle"
 import { Contact } from "@/components/contact"
 import { Footer } from "@/components/footer"
@@ -19,6 +20,7 @@ export default function Home() {
       <About />
       <AboutFernanda />
       <Instructors />
+      <SpectacleTeaser />
       <Spectacle />
       <Classes />
       <BalletSteps />

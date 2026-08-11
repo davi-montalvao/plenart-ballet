@@ -12,11 +12,12 @@ const scheduleData: Record<string, ScheduleItem[]> = {
     { time: "14h30 às 16h", class: "Advanced Foundation (Royal)" },
     { time: "18h às 19h", class: "Jazz Juvenil" },
     { time: "19h às 20h", class: "Ballet Infantil II" },
-    { time: "19h às 20h", class: "Ballet Adulto" },
+    { time: "19h às 20h", class: "Ballet Fitness" },
     { time: "19h30 às 20h30", class: "Jazz Adulto" },
     { time: "20h às 21h30", class: "Ballet Intermediário" },
   ],
   terca: [
+    { time: "07h às 08h", class: "Ballet Fitness" },
     { time: "08h às 09h", class: "Ballet Intermediário/Avançado" },
     { time: "09h às 10h", class: "Baby Class" },
     { time: "14h45 às 16h", class: "Ballet Infantil II" },
@@ -24,6 +25,7 @@ const scheduleData: Record<string, ScheduleItem[]> = {
     { time: "16h30 às 18h", class: "Ballet Juvenil" },
     { time: "18h30 às 19h30", class: "K-Pop Juvenil/Adulto" },
     { time: "19h às 20h30", class: "Ballet Intermediário" },
+    { time: "19h30 às 20h30", class: "Ballet Adulto Iniciante" },
     { time: "20h30 às 21h45", class: "Ballet Adulto II" },
   ],
   quarta: [
@@ -31,11 +33,11 @@ const scheduleData: Record<string, ScheduleItem[]> = {
     { time: "14h30 às 16h", class: "Advanced Foundation (Royal)" },
     { time: "15h30 às 17h", class: "Ballet Juvenil" },
     { time: "19h às 20h", class: "Ballet Infantil II" },
-    { time: "19h às 20h", class: "Ballet Adulto" },
     { time: "19h às 20h", class: "Dança Livre" },
     { time: "20h às 21h30", class: "Ballet Intermediário" },
   ],
   quinta: [
+    { time: "07h às 08h", class: "Ballet Fitness" },
     { time: "08h às 09h", class: "Ballet Intermediário/Avançado" },
     { time: "09h às 10h", class: "Baby Class" },
     { time: "14h45 às 16h", class: "Ballet Infantil II" },
@@ -45,6 +47,7 @@ const scheduleData: Record<string, ScheduleItem[]> = {
     { time: "18h às 19h", class: "PBT" },
     { time: "18h30 às 19h30", class: "K-Pop Infantil" },
     { time: "19h às 20h30", class: "Ballet Intermediário" },
+    { time: "19h30 às 20h30", class: "Ballet Adulto Iniciante" },
     { time: "20h30 às 21h45", class: "Ballet Adulto II" },
   ],
   sexta: [

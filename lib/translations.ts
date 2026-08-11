@@ -35,7 +35,7 @@ export const translations = {
     },
     instructors: {
       label: 'Nossa Equipe',
-      title: 'Nossas Instrutoras',
+          title: 'Nossos Instrutores',
       cta: 'Conheça nossa equipe e agende uma aula experimental',
       agendar: 'Agendar Aula',
       roles: {
@@ -45,7 +45,21 @@ export const translations = {
         leticia: 'Baby Class e Ballet Clássico',
         luana: 'Baby Class, Ballet Clássico e Jazz',
         rafa: 'Baby Class e Ballet Clássico',
+        sergio: 'Professor de Dança de Salão há mais de 30 anos, com formação em Educação Física, Pedagogia Waldorf e Psicomotricidade. Foi bailarino do Balé Popular de Recife e desenvolveu metodologia própria de ensino, sendo referência na aplicação da dança para educação e desenvolvimento humano.',
       },
+    },
+    spectacleTeaser: {
+      label: 'Espetáculo 2026',
+      title: 'Reino dos Doces',
+      titleHighlight: 'Outubro 2026',
+      phrase:
+        '🍬✨ A contagem regressiva começou! Prepare-se para entrar em um mundo mágico de sabores, sonhos e muita dança: vem aí o Espetáculo 2026 — Reino dos Doces! 👀🍭',
+      when: 'Em outubro · Contagem regressiva até o grande dia',
+      cta: 'Quero saber mais',
+      days: 'Dias',
+      hours: 'Horas',
+      minutes: 'Min',
+      seconds: 'Seg',
     },
     spectacle: {
       label: 'Espetáculo 2025',
@@ -216,7 +230,7 @@ export const translations = {
     },
     instructors: {
       label: 'Notre équipe',
-      title: 'Nos enseignantes',
+          title: 'Nos enseignants',
       cta: 'Découvrez notre équipe et réservez un cours d\'essai',
       agendar: 'Réserver un cours',
       roles: {
@@ -226,7 +240,21 @@ export const translations = {
         leticia: 'Baby Class et Ballet Classique',
         luana: 'Baby Class, Ballet Classique et Jazz',
         rafa: 'Baby Class et Ballet Classique',
+        sergio: 'Professeur de danse de salon depuis plus de 30 ans, formé en Éducation Physique, Pédagogie Waldorf et Psychomotricité. Ancien danseur du Balé Popular de Recife, il a développé sa propre méthodologie d\'enseignement et est une référence dans l\'application de la danse à l\'éducation et au développement humain.',
       },
+    },
+    spectacleTeaser: {
+      label: 'Spectacle 2026',
+      title: 'Royaume des Sucreries',
+      titleHighlight: 'Octobre 2026',
+      phrase:
+        '🍬✨ Le compte à rebours a commencé ! Préparez-vous à entrer dans un monde magique de saveurs, de rêves et de danse : voici le Spectacle 2026 — Royaume des Sucreries ! 👀🍭',
+      when: 'En octobre · Compte à rebours jusqu\'au grand jour',
+      cta: 'Je veux en savoir plus',
+      days: 'Jours',
+      hours: 'Heures',
+      minutes: 'Min',
+      seconds: 'Sec',
     },
     spectacle: {
       label: 'Spectacle 2025',

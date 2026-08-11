@@ -32,7 +32,7 @@ export function Header() {
     { href: "#sobre", label: t.nav.sobre },
     { href: "#sobre-fernanda", label: t.nav.fernanda },
     { href: "#instrutores", label: t.nav.instrutores },
-    { href: "#espetaculo", label: t.nav.espetaculo },
+    { href: "#reino-dos-doces", label: t.nav.espetaculo },
     { href: "#classes", label: t.nav.classes },
     { href: "#passos", label: t.nav.balé },
     { href: "#horarios", label: t.nav.horarios },
