@@ -1,4 +1,4 @@
-export type Language = 'pt' | 'fr'
+export type Language = 'pt' | 'fr';
 
 export const translations = {
   pt: {
@@ -14,7 +14,8 @@ export const translations = {
     },
     hero: {
       welcome: 'Bem-vindo à',
-      subtitle: 'Uma jornada pela elegância e expressão da dança. Descubra a magia do ballet na Plenarte.',
+      subtitle:
+        'Uma jornada pela elegância e expressão da dança. Descubra a magia do ballet na Plenarte.',
       ctaClasses: 'Conheça Nossas Classes',
       ctaAgendar: 'Agendar Aula',
       scrollDiscover: 'Role para descobrir',
@@ -23,7 +24,8 @@ export const translations = {
       title: 'Sobre Nós',
       heading: 'A arte em',
       headingHighlight: 'plenitude',
-      description: 'O Plenarte Ballet é um espaço dedicado à formação em dança com profundidade artística, técnica e humana. Sob direção de Fernanda Abreu, a escola propõe um ensino que respeita o desenvolvimento individual, une rigor técnico à sensibilidade e compreende a dança como linguagem, expressão e construção de identidade. Aqui o Ballet é vivido com consciência, tempo e verdade.',
+      description:
+        'O Plenarte Ballet é um espaço dedicado à formação em dança com profundidade artística, técnica e humana. Sob direção de Fernanda Abreu, a escola propõe um ensino que respeita o desenvolvimento individual, une rigor técnico à sensibilidade e compreende a dança como linguagem, expressão e construção de identidade. Aqui o Ballet é vivido com consciência, tempo e verdade.',
       cta: 'Conheça Nossa História',
       imageCaption1: 'Aulas com turmas reduzidas',
       imageCaption2: 'Desde 2026',
@@ -31,21 +33,23 @@ export const translations = {
     aboutFernanda: {
       title: 'Sobre Fernanda',
       subtitle: 'Diretora, fundadora e responsável pelo Plenarte Ballet.',
-      description: 'Fernanda Abreu é bailarina, pedagoga, psicopedagoga e psicomotricista, além de mãe da Maitê e do Dani. Como diretora do Plenarte Ballet, é responsável pela concepção pedagógica e artística da escola, conduzindo seu trabalho com foco no desenvolvimento individual, na profundidade técnica e na expressão criativa. As fotos ilustram sua trajetória e momentos marcantes de sua atuação profissional.',
+      description:
+        'Fernanda Abreu é bailarina, pedagoga, psicopedagoga e psicomotricista, além de mãe da Maitê e do Dani. Como diretora do Plenarte Ballet, é responsável pela concepção pedagógica e artística da escola, conduzindo seu trabalho com foco no desenvolvimento individual, na profundidade técnica e na expressão criativa. As fotos ilustram sua trajetória e momentos marcantes de sua atuação profissional.',
     },
     instructors: {
       label: 'Nossa Equipe',
-          title: 'Nossos Instrutores',
+      title: 'Nossos Instrutores',
       cta: 'Conheça nossa equipe e agende uma aula experimental',
       agendar: 'Agendar Aula',
       roles: {
-        fernanda: 'Diretora e professora de Baby Class, Preparatório, Clássico e Fitness',
+        fernanda:
+          'Diretora e professora de Baby Class, Preparatório, Clássico e Fitness',
         helena: 'Ballet Fitness e Jazz',
         carol: 'Baby Class, Ballet Clássico e KPop',
         leticia: 'Baby Class e Ballet Clássico',
         luana: 'Baby Class, Ballet Clássico e Jazz',
         rafa: 'Baby Class e Ballet Clássico',
-        sergio: 'Professor de Dança de Salão há mais de 30 anos, com formação em Educação Física, Pedagogia Waldorf e Psicomotricidade. Foi bailarino do Balé Popular de Recife e desenvolveu metodologia própria de ensino, sendo referência na aplicação da dança para educação e desenvolvimento humano.',
+        sergio: 'Dança de Salão',
       },
     },
     spectacleTeaser: {
@@ -73,50 +77,58 @@ export const translations = {
       label: 'Nossas Classes',
       title: 'Uma jornada para cada',
       titleHighlight: 'idade',
-      subtitle: 'Do primeiro passo às pontas, oferecemos formação completa respeitando o desenvolvimento de cada faixa etária.',
+      subtitle:
+        'Do primeiro passo às pontas, oferecemos formação completa respeitando o desenvolvimento de cada faixa etária.',
       classesLabel: 'Classes',
       items: {
         baby: {
           title: 'Baby Class',
           subtitle: 'De 3 à 6 anos',
           year: 'Iniciação',
-          description: 'A introdução lúdica ao ballet. Trabalhamos a coordenação, a musicalidade e a disciplina de forma encantadora para as pequenas bailarinas.',
+          description:
+            'A introdução lúdica ao ballet. Trabalhamos a coordenação, a musicalidade e a disciplina de forma encantadora para as pequenas bailarinas.',
         },
         preparatorio: {
           title: 'Ballet Preparatório',
           subtitle: 'De 6 à 7 anos',
           year: 'Transição',
-          description: 'Turma de transição do Baby Class para o ballet clássico, com foco em postura, coordenação e musicalidade, de forma lúdica e respeitosa.',
+          description:
+            'Turma de transição do Baby Class para o ballet clássico, com foco em postura, coordenação e musicalidade, de forma lúdica e respeitosa.',
         },
         classico: {
           title: 'Ballet Clássico',
           subtitle: 'A partir de 8 anos',
           year: 'Base técnica',
-          description: 'A base técnica completa para todas as idades. Oferecemos turmas do iniciante ao avançado, focando em postura, técnica e expressão artística.',
+          description:
+            'A base técnica completa para todas as idades. Oferecemos turmas do iniciante ao avançado, focando em postura, técnica e expressão artística.',
         },
         fitness: {
           title: 'Ballet Fitness',
           subtitle: 'A partir de 16 anos',
           year: 'Condicionamento',
-          description: 'O poder do ballet aliado ao condicionamento físico. Exercícios na barra e no centro focados em tonificação muscular, flexibilidade e postura.',
+          description:
+            'O poder do ballet aliado ao condicionamento físico. Exercícios na barra e no centro focados em tonificação muscular, flexibilidade e postura.',
         },
         jazz: {
           title: 'Jazz Dance',
           subtitle: 'A partir de 8 anos',
           year: 'Expressão',
-          description: 'Liberdade e energia. Uma modalidade vibrante que une a técnica clássica com ritmos modernos, agilidade e muita expressão corporal.',
+          description:
+            'Liberdade e energia. Uma modalidade vibrante que une a técnica clássica com ritmos modernos, agilidade e muita expressão corporal.',
         },
         kpop: {
           title: 'K-Pop',
           subtitle: 'A partir de 8 anos',
           year: 'Coreografias',
-          description: 'Aprenda as coreografias dos seus ídolos. Uma aula dinâmica e divertida, focada em ritmo, sincronia e na cultura pop coreana.',
+          description:
+            'Aprenda as coreografias dos seus ídolos. Uma aula dinâmica e divertida, focada em ritmo, sincronia e na cultura pop coreana.',
         },
         debutantes: {
           title: 'Debutantes e Noivos',
           subtitle: 'Todas as idades',
           year: 'Personalizado',
-          description: 'Consultoria e criação de coreografias personalizadas. Transformamos seu momento especial em uma apresentação única, elegante e inesquecível.',
+          description:
+            'Consultoria e criação de coreografias personalizadas. Transformamos seu momento especial em uma apresentação única, elegante e inesquecível.',
         },
       },
     },
@@ -128,23 +140,28 @@ export const translations = {
       steps: {
         plie: {
           name: 'Plié',
-          description: 'Flexão dos joelhos mantendo o alinhamento. Base para saltos e aterrissagens, trabalhando força e elasticidade.',
+          description:
+            'Flexão dos joelhos mantendo o alinhamento. Base para saltos e aterrissagens, trabalhando força e elasticidade.',
         },
         tendu: {
           name: 'Tendu',
-          description: 'Pé desliza no chão até estender completamente, alongando a perna. Fundamental para a precisão e a linha do pé.',
+          description:
+            'Pé desliza no chão até estender completamente, alongando a perna. Fundamental para a precisão e a linha do pé.',
         },
         arabesque: {
           name: 'Arabesque',
-          description: 'Pose em que uma perna fica de apoio e a outra estendida atrás, com os braços em harmonia. Um dos ícones do ballet.',
+          description:
+            'Pose em que uma perna fica de apoio e a outra estendida atrás, com os braços em harmonia. Um dos ícones do ballet.',
         },
         pirouette: {
           name: 'Pirouette',
-          description: 'Giro completo sobre uma perna. Exige eixo, equilíbrio e coordenação entre olhar, braços e pernas.',
+          description:
+            'Giro completo sobre uma perna. Exige eixo, equilíbrio e coordenação entre olhar, braços e pernas.',
         },
         grandJete: {
           name: 'Grand Jeté',
-          description: 'Salto em que as pernas se abrem no ar em split. Combina impulsão, flexibilidade e expressão.',
+          description:
+            'Salto em que as pernas se abrem no ar em split. Combina impulsão, flexibilidade e expressão.',
         },
       },
     },
@@ -154,11 +171,31 @@ export const translations = {
       titleHighlight: 'Aula',
       subtitle: 'Como é uma aula de ballet clássico',
       steps: {
-        1: { title: 'Aquecimento', description: 'Preparamos o corpo com alongamento e mobilidade, ativando a musculatura e prevenindo lesões.' },
-        2: { title: 'Barra', description: 'Exercícios na barra para desenvolver técnica, postura, equilíbrio e força, base de todo o trabalho.' },
-        3: { title: 'Centro', description: 'Execução dos passos no centro da sala, sem apoio, trabalhando equilíbrio, coordenação e expressão.' },
-        4: { title: 'Saltos (Allegro)', description: 'Sequências de saltos que unem técnica, impulsão e musicalidade, dando leveza e dinâmica à aula.' },
-        5: { title: 'Reverência', description: 'Encerramento com respeito ao espaço, ao professor e à arte. Um momento de gratidão e despedida.' },
+        1: {
+          title: 'Aquecimento',
+          description:
+            'Preparamos o corpo com alongamento e mobilidade, ativando a musculatura e prevenindo lesões.',
+        },
+        2: {
+          title: 'Barra',
+          description:
+            'Exercícios na barra para desenvolver técnica, postura, equilíbrio e força, base de todo o trabalho.',
+        },
+        3: {
+          title: 'Centro',
+          description:
+            'Execução dos passos no centro da sala, sem apoio, trabalhando equilíbrio, coordenação e expressão.',
+        },
+        4: {
+          title: 'Saltos (Allegro)',
+          description:
+            'Sequências de saltos que unem técnica, impulsão e musicalidade, dando leveza e dinâmica à aula.',
+        },
+        5: {
+          title: 'Reverência',
+          description:
+            'Encerramento com respeito ao espaço, ao professor e à arte. Um momento de gratidão e despedida.',
+        },
       },
     },
     schedule: {
@@ -179,7 +216,8 @@ export const translations = {
       title: 'Contato',
       heading: 'Pronto para',
       headingHighlight: 'dançar?',
-      description: 'Agende uma aula experimental e descubra a magia da dança. Estamos ansiosos para conhecer você e iniciar essa jornada juntos.',
+      description:
+        'Agende uma aula experimental e descubra a magia da dança. Estamos ansiosos para conhecer você e iniciar essa jornada juntos.',
       cta: 'Agendar Aula pelo WhatsApp',
       address: 'Endereço',
       phone: 'Telefone',
@@ -209,16 +247,18 @@ export const translations = {
     },
     hero: {
       welcome: 'Bienvenue à',
-      subtitle: 'Un voyage à travers l\'élégance et l\'expression de la danse. Découvrez la magie du ballet à Plenarte.',
+      subtitle:
+        "Un voyage à travers l'élégance et l'expression de la danse. Découvrez la magie du ballet à Plenarte.",
       ctaClasses: 'Découvrez nos cours',
       ctaAgendar: 'Réserver un cours',
       scrollDiscover: 'Faites défiler pour découvrir',
     },
     about: {
       title: 'À propos de nous',
-      heading: 'L\'art en',
+      heading: "L'art en",
       headingHighlight: 'plénitude',
-      description: 'Plenarte Ballet est un espace dédié à la formation en danse avec profondeur artistique, technique et humaine. Sous la direction de Fernanda Abreu, l\'école propose un enseignement qui respecte le développement individuel, unit la rigueur technique à la sensibilité et comprend la danse comme langage, expression et construction d\'identité. Ici le Ballet est vécu avec conscience, temps et vérité.',
+      description:
+        "Plenarte Ballet est un espace dédié à la formation en danse avec profondeur artistique, technique et humaine. Sous la direction de Fernanda Abreu, l'école propose un enseignement qui respecte le développement individuel, unit la rigueur technique à la sensibilité et comprend la danse comme langage, expression et construction d'identité. Ici le Ballet est vécu avec conscience, temps et vérité.",
       cta: 'Découvrez notre histoire',
       imageCaption1: 'Cours en petits groupes',
       imageCaption2: 'Depuis 2026',
@@ -226,21 +266,23 @@ export const translations = {
     aboutFernanda: {
       title: 'À propos de Fernanda',
       subtitle: 'Directrice, fondatrice et responsable de Plenarte Ballet.',
-      description: 'Fernanda Abreu est danseuse, pédagogue, psychopédagogue et psychomotricienne, ainsi que mère de Maitê et Dani. En tant que directrice de Plenarte Ballet, elle est responsable de la conception pédagogique et artistique de l\'école, menant son travail avec un accent sur le développement individuel, la profondeur technique et l\'expression créative. Les photos illustrent sa trajectoire et les moments marquants de son parcours professionnel.',
+      description:
+        "Fernanda Abreu est danseuse, pédagogue, psychopédagogue et psychomotricienne, ainsi que mère de Maitê et Dani. En tant que directrice de Plenarte Ballet, elle est responsable de la conception pédagogique et artistique de l'école, menant son travail avec un accent sur le développement individuel, la profondeur technique et l'expression créative. Les photos illustrent sa trajectoire et les moments marquants de son parcours professionnel.",
     },
     instructors: {
       label: 'Notre équipe',
-          title: 'Nos enseignants',
-      cta: 'Découvrez notre équipe et réservez un cours d\'essai',
+      title: 'Nos enseignants',
+      cta: "Découvrez notre équipe et réservez un cours d'essai",
       agendar: 'Réserver un cours',
       roles: {
-        fernanda: 'Directrice et professeure de Baby Class, Préparatoire, Classique et Fitness',
+        fernanda:
+          'Directrice et professeure de Baby Class, Préparatoire, Classique et Fitness',
         helena: 'Ballet Fitness et Jazz',
         carol: 'Baby Class, Ballet Classique et KPop',
         leticia: 'Baby Class et Ballet Classique',
         luana: 'Baby Class, Ballet Classique et Jazz',
         rafa: 'Baby Class et Ballet Classique',
-        sergio: 'Professeur de danse de salon depuis plus de 30 ans, formé en Éducation Physique, Pédagogie Waldorf et Psychomotricité. Ancien danseur du Balé Popular de Recife, il a développé sa propre méthodologie d\'enseignement et est une référence dans l\'application de la danse à l\'éducation et au développement humain.',
+        sergio: 'Danse de salon',
       },
     },
     spectacleTeaser: {
@@ -249,7 +291,7 @@ export const translations = {
       titleHighlight: 'Octobre 2026',
       phrase:
         '🍬✨ Le compte à rebours a commencé ! Préparez-vous à entrer dans un monde magique de saveurs, de rêves et de danse : voici le Spectacle 2026 — Royaume des Sucreries ! 👀🍭',
-      when: 'En octobre · Compte à rebours jusqu\'au grand jour',
+      when: "En octobre · Compte à rebours jusqu'au grand jour",
       cta: 'Je veux en savoir plus',
       days: 'Jours',
       hours: 'Heures',
@@ -268,42 +310,126 @@ export const translations = {
       label: 'Nos cours',
       title: 'Un parcours pour chaque',
       titleHighlight: 'âge',
-      subtitle: 'Des premiers pas aux pointes, nous offrons une formation complète en respectant le développement de chaque tranche d\'âge.',
+      subtitle:
+        "Des premiers pas aux pointes, nous offrons une formation complète en respectant le développement de chaque tranche d'âge.",
       classesLabel: 'Cours',
       items: {
-        baby: { title: 'Baby Class', subtitle: 'De 3 à 6 ans', year: 'Initiation', description: 'L\'introduction ludique au ballet. Nous travaillons la coordination, la musicalité et la discipline de manière enchantée pour les petites ballerines.' },
-        preparatorio: { title: 'Ballet Préparatoire', subtitle: 'De 6 à 7 ans', year: 'Transition', description: 'Classe de transition du Baby Class au ballet classique, avec un accent sur la posture, la coordination et la musicalité, de manière ludique et respectueuse.' },
-        classico: { title: 'Ballet Classique', subtitle: 'À partir de 8 ans', year: 'Base technique', description: 'La base technique complète pour tous les âges. Nous offrons des classes du débutant à l\'avancé, en nous concentrant sur la posture, la technique et l\'expression artistique.' },
-        fitness: { title: 'Ballet Fitness', subtitle: 'À partir de 16 ans', year: 'Conditionnement', description: 'La puissance du ballet alliée au conditionnement physique. Exercices à la barre et au centre axés sur la tonification musculaire, la flexibilité et la posture.' },
-        jazz: { title: 'Jazz Dance', subtitle: 'À partir de 8 ans', year: 'Expression', description: 'Liberté et énergie. Une modalité vibrante qui unit la technique classique aux rythmes modernes, l\'agilité et beaucoup d\'expression corporelle.' },
-        kpop: { title: 'K-Pop', subtitle: 'À partir de 8 ans', year: 'Chorégraphies', description: 'Apprenez les chorégraphies de vos idoles. Un cours dynamique et amusant, axé sur le rythme, la synchronisation et la culture pop coréenne.' },
-        debutantes: { title: 'Débutantes et Mariés', subtitle: 'Tous âges', year: 'Personnalisé', description: 'Conseil et création de chorégraphies personnalisées. Nous transformons votre moment spécial en une présentation unique, élégante et inoubliable.' },
+        baby: {
+          title: 'Baby Class',
+          subtitle: 'De 3 à 6 ans',
+          year: 'Initiation',
+          description:
+            "L'introduction ludique au ballet. Nous travaillons la coordination, la musicalité et la discipline de manière enchantée pour les petites ballerines.",
+        },
+        preparatorio: {
+          title: 'Ballet Préparatoire',
+          subtitle: 'De 6 à 7 ans',
+          year: 'Transition',
+          description:
+            'Classe de transition du Baby Class au ballet classique, avec un accent sur la posture, la coordination et la musicalité, de manière ludique et respectueuse.',
+        },
+        classico: {
+          title: 'Ballet Classique',
+          subtitle: 'À partir de 8 ans',
+          year: 'Base technique',
+          description:
+            "La base technique complète pour tous les âges. Nous offrons des classes du débutant à l'avancé, en nous concentrant sur la posture, la technique et l'expression artistique.",
+        },
+        fitness: {
+          title: 'Ballet Fitness',
+          subtitle: 'À partir de 16 ans',
+          year: 'Conditionnement',
+          description:
+            'La puissance du ballet alliée au conditionnement physique. Exercices à la barre et au centre axés sur la tonification musculaire, la flexibilité et la posture.',
+        },
+        jazz: {
+          title: 'Jazz Dance',
+          subtitle: 'À partir de 8 ans',
+          year: 'Expression',
+          description:
+            "Liberté et énergie. Une modalité vibrante qui unit la technique classique aux rythmes modernes, l'agilité et beaucoup d'expression corporelle.",
+        },
+        kpop: {
+          title: 'K-Pop',
+          subtitle: 'À partir de 8 ans',
+          year: 'Chorégraphies',
+          description:
+            'Apprenez les chorégraphies de vos idoles. Un cours dynamique et amusant, axé sur le rythme, la synchronisation et la culture pop coréenne.',
+        },
+        debutantes: {
+          title: 'Débutantes et Mariés',
+          subtitle: 'Tous âges',
+          year: 'Personnalisé',
+          description:
+            'Conseil et création de chorégraphies personnalisées. Nous transformons votre moment spécial en une présentation unique, élégante et inoubliable.',
+        },
       },
     },
     balletSteps: {
       label: 'Le Ballet',
       title: 'Les pas du',
       titleHighlight: 'Ballet',
-      subtitle: 'Quelques-uns des mouvements classiques que vous retrouverez en cours',
+      subtitle:
+        'Quelques-uns des mouvements classiques que vous retrouverez en cours',
       steps: {
-        plie: { name: 'Plié', description: 'Flexion des genoux en maintenant l\'alignement. Base pour les sauts et réceptions, travaillant force et élasticité.' },
-        tendu: { name: 'Tendu', description: 'Le pied glisse sur le sol jusqu\'à extension complète, allongeant la jambe. Fondamental pour la précision et la ligne du pied.' },
-        arabesque: { name: 'Arabesque', description: 'Pose où une jambe est en appui et l\'autre tendue derrière, avec les bras en harmonie. Une des icônes du ballet.' },
-        pirouette: { name: 'Pirouette', description: 'Tour complet sur une jambe. Exige axe, équilibre et coordination entre le regard, les bras et les jambes.' },
-        grandJete: { name: 'Grand Jeté', description: 'Saut où les jambes s\'ouvrent en l\'air en grand écart. Combine impulsion, flexibilité et expression.' },
+        plie: {
+          name: 'Plié',
+          description:
+            "Flexion des genoux en maintenant l'alignement. Base pour les sauts et réceptions, travaillant force et élasticité.",
+        },
+        tendu: {
+          name: 'Tendu',
+          description:
+            "Le pied glisse sur le sol jusqu'à extension complète, allongeant la jambe. Fondamental pour la précision et la ligne du pied.",
+        },
+        arabesque: {
+          name: 'Arabesque',
+          description:
+            "Pose où une jambe est en appui et l'autre tendue derrière, avec les bras en harmonie. Une des icônes du ballet.",
+        },
+        pirouette: {
+          name: 'Pirouette',
+          description:
+            'Tour complet sur une jambe. Exige axe, équilibre et coordination entre le regard, les bras et les jambes.',
+        },
+        grandJete: {
+          name: 'Grand Jeté',
+          description:
+            "Saut où les jambes s'ouvrent en l'air en grand écart. Combine impulsion, flexibilité et expression.",
+        },
       },
     },
     classStructure: {
       label: 'Cours de Ballet',
-      title: 'Structure d\'une',
+      title: "Structure d'une",
       titleHighlight: 'Leçon',
       subtitle: 'Comment se déroule une leçon de ballet classique',
       steps: {
-        1: { title: 'Échauffement', description: 'Nous préparons le corps avec étirements et mobilité, activant la musculature et prévenant les blessures.' },
-        2: { title: 'Barre', description: 'Exercices à la barre pour développer la technique, la posture, l\'équilibre et la force, base de tout le travail.' },
-        3: { title: 'Centre', description: 'Exécution des pas au centre de la salle, sans support, travaillant l\'équilibre, la coordination et l\'expression.' },
-        4: { title: 'Sauts (Allegro)', description: 'Séquences de sauts qui unissent technique, impulsion et musicalité, donnant légèreté et dynamique au cours.' },
-        5: { title: 'Révérence', description: 'Clôture avec respect pour l\'espace, le professeur et l\'art. Un moment de gratitude et d\'adieu.' },
+        1: {
+          title: 'Échauffement',
+          description:
+            'Nous préparons le corps avec étirements et mobilité, activant la musculature et prévenant les blessures.',
+        },
+        2: {
+          title: 'Barre',
+          description:
+            "Exercices à la barre pour développer la technique, la posture, l'équilibre et la force, base de tout le travail.",
+        },
+        3: {
+          title: 'Centre',
+          description:
+            "Exécution des pas au centre de la salle, sans support, travaillant l'équilibre, la coordination et l'expression.",
+        },
+        4: {
+          title: 'Sauts (Allegro)',
+          description:
+            'Séquences de sauts qui unissent technique, impulsion et musicalité, donnant légèreté et dynamique au cours.',
+        },
+        5: {
+          title: 'Révérence',
+          description:
+            "Clôture avec respect pour l'espace, le professeur et l'art. Un moment de gratitude et d'adieu.",
+        },
       },
     },
     schedule: {
@@ -324,7 +450,8 @@ export const translations = {
       title: 'Contact',
       heading: 'Prêt à',
       headingHighlight: 'danser?',
-      description: 'Réservez un cours d\'essai et découvrez la magie de la danse. Nous avons hâte de vous connaître et de commencer ce voyage ensemble.',
+      description:
+        "Réservez un cours d'essai et découvrez la magie de la danse. Nous avons hâte de vous connaître et de commencer ce voyage ensemble.",
       cta: 'Réserver un cours via WhatsApp',
       address: 'Adresse',
       phone: 'Téléphone',
@@ -341,4 +468,4 @@ export const translations = {
       copyright: '© 2026 Plenarte Ballet. Tous droits réservés.',
     },
   },
-} as const
+} as const;

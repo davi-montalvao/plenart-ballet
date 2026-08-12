@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/language-context';
 
-/** Início de outubro de 2026 — mês do espetáculo */
-const TARGET_DATE = new Date('2026-10-01T00:00:00');
+/** Data do espetáculo Reino dos Doces */
+const TARGET_DATE = new Date('2026-10-31T00:00:00');
 
 type TimeLeft = {
   days: number;
